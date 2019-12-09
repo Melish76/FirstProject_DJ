@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+<h3>Yazilim Bilimi Blogu</h3>
+<p>Yazilim bilimi blogunda her sey Mustafa Murat ile cok guzel MasAllah</p>
+</div>
+{% if request.user.is_authenticated %}
+Giris Yapilmis, {{request.user}}
+{% else %}
+Giris Yapilmamis
+{% endif %}
+
+{% comment %} <p>{{number1}}</p> {% endcomment %}
+
+{% comment %} {% for number in numbers %}
+<p>{{number}}</p>
+{% endfor %} {% endcomment %}
+{% endblock body %}
